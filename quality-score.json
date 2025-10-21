@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2025-10-21T20:02:51.414Z",
+  "updatedAt": "2025-10-21T20:07:49.298Z",
   "source": "ci",
   "score": 78,
   "lintPoints": 20,
@@ -17,9 +17,9 @@
     "items": []
   },
   "tests": {
-    "total": 177,
-    "passed": 155,
-    "failed": 22,
+    "total": 185,
+    "passed": 171,
+    "failed": 14,
     "failures": [
       {
         "name": "Domain Rules (T1-T4) T1: price_net <= 0 blockt Save",
@@ -27,89 +27,49 @@
         "message": "AssertionError: expected [Function] to throw error matching /größer als 0.01/ but got '[\\n  {\\n    \"code\": \"custom\",\\n    \"m…'\n    at Proxy.<anonymous> (file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/expect/dist/index.js:1420:16)\n    at Proxy.<anonymous> (file:///home/ru"
       },
       {
-        "name": "priceMath - Unit Family System correctly identifies unit families",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: getFamily is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:24:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishkit"
+        "name": "Ingredient Price Editor 1. Reset bei Neuer Zutat: Öffne Dialog mit ingredient=null → name leer, supplierPrices leer",
+        "file": "src/test/ingredient.prices.spec.tsx",
+        "message": "TestingLibraryElementError: Unable to find a label with the text of: /Name/i\n\nIgnored nodes: comments, script, style\n\u001b[36m<body\u001b[39m\n  \u001b[33mdata-scroll-locked\u001b[39m=\u001b[32m\"1\"\u001b[39m\n  \u001b[33mstyle\u001b[39m=\u001b[32m\"pointer-events: none;\"\u001b[39m\n\u001b[36m>\u001b[39m\n  \u001b[36m<span\u001b[39m\n    \u001b[33maria-hidden\u001b[39m=\u001b[32m\"true\"\u001b[3"
       },
       {
-        "name": "priceMath - Unit Family System returns normalized base units",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: normalizedBaseUnit is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:33:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
+        "name": "Ingredient Price Editor 3. Preis-Snapshot: Draft wird gemerged, handleSaveAndKeepOpen() fügt Preis in State",
+        "file": "src/test/ingredient.prices.spec.tsx",
+        "message": "TestingLibraryElementError: Unable to find an element with the text: /Lieferant hinzufügen/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b"
       },
       {
-        "name": "priceMath - Unit Family System returns small units correctly",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: smallUnit is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:41:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishkit"
+        "name": "Ingredient Price Editor 4. Duplikat-Guard: Gleiches Supplier+Pack wird blockiert",
+        "file": "src/test/ingredient.prices.spec.tsx",
+        "message": "TestingLibraryElementError: Unable to find an element with the text: 10.50 EUR. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body\u001b[39m"
       },
       {
-        "name": "priceMath - Unit Family System returns small factors correctly",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: smallFactor is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:49:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishk"
-      },
-      {
-        "name": "priceMath - Precision (6 decimals internal) rounds to 6 decimals",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: round6 is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:59:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishkitche"
-      },
-      {
-        "name": "priceMath - Precision (6 decimals internal) calculates perBase with 6-decimal precision",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: calcPerNormalizedBase is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:65:20\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/wor"
-      },
-      {
-        "name": "priceMath - Precision (6 decimals internal) calculates perSmall with 6-decimal precision",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: calcPerSmallBase is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:76:20\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foo"
-      },
-      {
-        "name": "priceMath - AC7: Parity (perBase == perSmall * smallFactor) maintains parity within ±0.00001 for mass units",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:90:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/fo"
-      },
-      {
-        "name": "priceMath - AC7: Parity (perBase == perSmall * smallFactor) maintains parity within ±0.00001 for volume units",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:112:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
-      },
-      {
-        "name": "priceMath - AC7: Parity (perBase == perSmall * smallFactor) handles piece units (no small unit)",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:134:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
+        "name": "Ingredient Price Editor 5. Max-5-Limit: 6. Preis wird verhindert, Toast erscheint",
+        "file": "src/test/ingredient.prices.spec.tsx",
+        "message": "TestingLibraryElementError: Unable to find an element with the text: /Lieferant hinzufügen/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b"
       },
       {
         "name": "priceMath - Formatters (2/4/5 decimals) formats VPE with 2 decimals",
         "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: fmtVPEeur is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:154:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishki"
+        "message": "AssertionError: expected '17,46 €' to match /17,46 €/\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:154:31\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner"
       },
       {
         "name": "priceMath - Formatters (2/4/5 decimals) formats VE with 2 decimals",
         "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: fmtVEeur is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:159:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishkit"
+        "message": "AssertionError: expected '3,26 €' to match /3,26 €/\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:159:29\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/w"
       },
       {
         "name": "priceMath - Formatters (2/4/5 decimals) formats perBase with 4 decimals",
         "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: fmtPerBase is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:164:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodishk"
+        "message": "AssertionError: expected '17,4500 EUR / kg' to match /17,4500 € \\/ kg/ kg\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:164:37\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at"
       },
       {
         "name": "priceMath - Formatters (2/4/5 decimals) formats perSmall with 5 decimals",
         "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: fmtPerSmall is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:170:12\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/foodish"
+        "message": "AssertionError: expected '0,01745 EUR / g' to match /0,01745 € \\/ g/ g\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:170:39\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at fi"
       },
       {
         "name": "priceMath - DisplaySet Integration computes complete display set with dual display",
         "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:178:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
-      },
-      {
-        "name": "priceMath - DisplaySet Integration uses VE as source when available",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:217:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
-      },
-      {
-        "name": "priceMath - DisplaySet Integration handles missing density gracefully for ml↔g conversion",
-        "file": "src/lib/__tests__/priceMath.dual.test.ts",
-        "message": "TypeError: computeDisplaySet is not a function\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:238:16\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner/work/f"
+        "message": "AssertionError: expected '17,45 €' to match /17,45 €/\n    at /home/runner/work/foodishkitchen/foodishkitchen/src/lib/__tests__/priceMath.dual.test.ts:196:25\n    at file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/runner/dist/chunk-hooks.js:155:11\n    at file:///home/runner"
       },
       {
         "name": "priceMath getDisplayPrices returns correct label and raw value",
