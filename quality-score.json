@@ -1,15 +1,16 @@
 {
-  "score": 39,
+  "score": 59,
   "lintPoints": 0,
-  "typecheckPoints": 0,
+  "typecheckPoints": 20,
   "testPoints": 19,
   "coveragePoints": 0,
   "domainPoints": 20,
-  "updatedAt": "2025-10-21T13:31:09.330Z",
+  "updatedAt": "2025-10-21T13:57:43.913Z",
   "source": "ci",
   "tests": {
     "passed": 141,
-    "total": 148
+    "total": 148,
+    "details": []
   },
   "domain": {
     "orphaned": 0,
