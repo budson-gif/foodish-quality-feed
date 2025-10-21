@@ -1,1 +1,21 @@
-{"tests_total":0,"tests_passed":0}
+{
+  "score": 39,
+  "lintPoints": 0,
+  "typecheckPoints": 0,
+  "testPoints": 19,
+  "coveragePoints": 0,
+  "domainPoints": 20,
+  "updatedAt": "2025-10-21T12:32:09.980Z",
+  "source": "ci",
+  "tests": {
+    "passed": 141,
+    "total": 148
+  },
+  "domain": {
+    "orphaned": 0,
+    "deletedRefs": 0,
+    "invalidPrices": 0,
+    "missingDensities": 0,
+    "total": 0
+  }
+}
