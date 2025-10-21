@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2025-10-21T18:35:17.884Z",
+  "updatedAt": "2025-10-21T19:09:53.702Z",
   "source": "ci",
   "score": 79,
   "lintPoints": 20,
@@ -18,9 +18,14 @@
   },
   "tests": {
     "total": 168,
-    "passed": 160,
-    "failed": 8,
+    "passed": 159,
+    "failed": 9,
     "failures": [
+      {
+        "name": "Domain Rules (T1-T4) T1: price_net <= 0 blockt Save",
+        "file": "src/test/domain-rules.test.ts",
+        "message": "AssertionError: expected [Function] to throw error matching /größer als 0.01/ but got '[\\n  {\\n    \"code\": \"custom\",\\n    \"m…'\n    at Proxy.<anonymous> (file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/expect/dist/index.js:1420:16)\n    at Proxy.<anonymous> (file:///home/ru"
+      },
       {
         "name": "Ingredient Price Editor 1. Reset bei Neuer Zutat: Öffne Dialog mit ingredient=null → name leer, supplierPrices leer",
         "file": "src/test/ingredient.prices.spec.tsx",
