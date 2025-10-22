@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2025-10-22T09:00:16.767Z",
+  "updatedAt": "2025-10-22T09:25:16.949Z",
   "source": "ci",
-  "score": 78,
+  "score": 79,
   "lintPoints": 20,
   "typecheckPoints": 20,
-  "testPoints": 18,
+  "testPoints": 19,
   "coveragePoints": 0,
   "domainPoints": 20,
   "lint": {
@@ -17,34 +17,14 @@
     "items": []
   },
   "tests": {
-    "total": 197,
-    "passed": 181,
-    "failed": 16,
+    "total": 189,
+    "passed": 177,
+    "failed": 12,
     "failures": [
       {
         "name": "Domain Rules (T1-T4) T1: price_net <= 0 blockt Save",
         "file": "src/test/domain-rules.test.ts",
         "message": "AssertionError: expected [Function] to throw error matching /größer als 0.01/ but got '[\\n  {\\n    \"code\": \"custom\",\\n    \"m…'\n    at Proxy.<anonymous> (file:///home/runner/work/foodishkitchen/foodishkitchen/node_modules/@vitest/expect/dist/index.js:1420:16)\n    at Proxy.<anonymous> (file:///home/ru"
-      },
-      {
-        "name": "Ingredient Price Editor 1. Reset bei Neuer Zutat: Öffne Dialog mit ingredient=null → name leer, supplierPrices leer",
-        "file": "src/test/ingredient.prices.spec.tsx",
-        "message": "TestingLibraryElementError: Unable to find a label with the text of: /Name/i\n\nIgnored nodes: comments, script, style\n\u001b[36m<body\u001b[39m\n  \u001b[33mdata-scroll-locked\u001b[39m=\u001b[32m\"1\"\u001b[39m\n  \u001b[33mstyle\u001b[39m=\u001b[32m\"pointer-events: none;\"\u001b[39m\n\u001b[36m>\u001b[39m\n  \u001b[36m<span\u001b[39m\n    \u001b[33maria-hidden\u001b[39m=\u001b[32m\"true\"\u001b[3"
-      },
-      {
-        "name": "Ingredient Price Editor 3. Preis-Snapshot: Draft wird gemerged, handleSaveAndKeepOpen() fügt Preis in State",
-        "file": "src/test/ingredient.prices.spec.tsx",
-        "message": "TestingLibraryElementError: Unable to find an element with the text: /Lieferant hinzufügen/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b"
-      },
-      {
-        "name": "Ingredient Price Editor 4. Duplikat-Guard: Gleiches Supplier+Pack wird blockiert",
-        "file": "src/test/ingredient.prices.spec.tsx",
-        "message": "TestingLibraryElementError: Unable to find an element with the text: 10.50 EUR. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b[36m<body\u001b[39m"
-      },
-      {
-        "name": "Ingredient Price Editor 5. Max-5-Limit: 6. Preis wird verhindert, Toast erscheint",
-        "file": "src/test/ingredient.prices.spec.tsx",
-        "message": "TestingLibraryElementError: Unable to find an element with the text: /Lieferant hinzufügen/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.\n\nIgnored nodes: comments, script, style\n\u001b"
       },
       {
         "name": "priceMath - Formatters (2/4/5 decimals) formats VPE with 2 decimals",
